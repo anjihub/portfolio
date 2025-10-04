@@ -1,38 +1,32 @@
 [
   {
     "title": "Learning to Utilize Mermaid Diagrams",
-    "description": "Visualizing network security attack flows with Mermaid diagrams.",
     "github": "https://github.com/anjihub/mermaid-diagram",
-    "blog": "blog/mermaid-diagrams-virtualization.html"
+    "blog": "mermaid-diagrams-virtualization.html"
   },
   {
     "title": "File System Forensics",
-    "description": "Recovered and analyzed digital evidence using OSForensics & FTK Imager.",
     "github": "https://github.com/anjihub/file-system-forensics",
-    "blog": "blog/file-system-forensics.html"
+    "blog": "file-system-forensics.html"
   },
   {
     "title": "Network Defense Labs",
-    "description": "Configured routers/switches, implemented ACLs, and assessed vulnerabilities.",
     "github": "https://github.com/anjihub/network-defense-labs",
-    "blog": "blog/network-defense-labs.html"
+    "blog": "network-defense-labs.html"
   },
   {
     "title": "Python & Bash Scripting",
-    "description": "Automated log parsing, intrusion detection, and password hashing.",
     "github": "https://github.com/anjihub/python-bash-scripting",
-    "blog": "blog/python-bash-scripting.html"
+    "blog": "python-&-bash-scripting.html"
   },
   {
     "title": "Network Traffic Analysis",
-    "description": "Captured/analyzed 10,000+ packets; identified anomalies with Wireshark.",
     "github": "https://github.com/anjihub/network-traffic-analysis",
-    "blog": "blog/network-traffic-analysis.html"
+    "blog": "network-traffic-analysis.html"
   },
   {
     "title": "Mobile Forensics",
-    "description": "Used Ghost Framework & ADB to extract/analyze Android device data.",
     "github": "https://github.com/anjihub/mobile-forensics",
-    "blog": "blog/mobile-forensics.html"
+    "blog": "mobile-forensics.html"
   }
 ]
