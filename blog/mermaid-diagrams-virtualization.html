@@ -6,7 +6,7 @@
   <title>Learning to Utilize Mermaid Diagrams | Anjeli Pancholi Blog</title>
   <link rel="stylesheet" href="../assets/css/style.css">
 </head>
-<body>
+<body data-project="Learning to Utilize Mermaid Diagrams">
   <header>
     <h1>Anjeli Pancholi Blog</h1>
     <nav>
@@ -29,12 +29,34 @@
         <li>Improve my ability to communicate complex cybersecurity concepts visually</li>
         <li>Strengthen my overall understanding of network defense mechanisms</li>
       </ul>
-      <p>Check out the GitHub project for diagrams: <a href="https://github.com/anjihub/mermaid-diagram" target="_blank">Mermaid Diagrams GitHub</a></p>
+      <!-- GitHub link will be inserted automatically here -->
     </section>
   </main>
 
   <footer>
     <p>&copy; 2025 Anjeli Pancholi | <a href="https://github.com/anjihub">GitHub</a> | <a href="https://www.linkedin.com/in/anjeli-pancholi-11280b272/">LinkedIn</a></p>
   </footer>
+
+  <script>
+    // Automatically insert GitHub link based on projects.json
+    const projectTitle = document.body.getAttribute('data-project');
+
+    fetch('../assets/data/projects.json')
+      .then(res => res.json())
+      .then(projects => {
+        const project = projects.find(p => p.title === projectTitle);
+        if (project) {
+          const githubLink = document.createElement('a');
+          githubLink.href = project.github;
+          githubLink.target = "_blank";
+          githubLink.className = "button";
+          githubLink.textContent = "View Project on GitHub";
+
+          const mainSection = document.querySelector('main section');
+          mainSection.appendChild(document.createElement('br')); // optional spacing
+          mainSection.appendChild(githubLink);
+        }
+      });
+  </script>
 </body>
 </html>
