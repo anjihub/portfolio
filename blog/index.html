@@ -35,16 +35,21 @@
   </footer>
 
   <script>
+    // Fetch projects.json and dynamically create blog list
     fetch('../assets/data/projects.json')
       .then(res => res.json())
       .then(projects => {
         const ul = document.getElementById('blog-list');
         projects.forEach(p => {
           const li = document.createElement('li');
+
+          // Each blog entry links to the blog
           li.innerHTML = `<strong>${p.title}</strong> – <a href="${p.blog}" class="button">Read Blog</a>`;
+
           ul.appendChild(li);
         });
-      });
+      })
+      .catch(err => console.error("Error loading projects.json:", err));
   </script>
 </body>
 </html>
