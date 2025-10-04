@@ -1,0 +1,48 @@
+/* General body styling */
+body {
+  font-family: 'Poppins', sans-serif;
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+  color: #333;
+}
+
+/* Header styling */
+header {
+  background: #1b1b1b;
+  color: #fff;
+  padding: 2rem;
+  text-align: center;
+}
+
+/* Navigation links in header */
+header nav a {
+  color: #00aaff;
+  text-decoration: none;
+  margin: 0 10px;
+}
+
+header nav a:hover {
+  text-decoration: underline;
+}
+
+/* Main content area */
+main {
+  padding: 2rem;
+  max-width: 800px;
+  margin: auto;
+}
+
+/* Footer styling */
+footer {
+  text-align: center;
+  padding: 1rem;
+  background: #1b1b1b;
+  color: #fff;
+}
+
+/* Optional: section spacing */
+section {
+  margin-bottom: 2rem;
+}
