@@ -36,7 +36,7 @@
         const ul = document.getElementById('projects-list');
         projects.forEach(p => {
           const li = document.createElement('li');
-          li.innerHTML = `<strong>${p.title}</strong>: ${p.description} <a href="${p.github}" target="_blank" class="button">GitHub</a>`;
+          li.innerHTML = `<strong>${p.title}</strong> – <a href="${p.github}" target="_blank" class="button">GitHub</a>`;
           ul.appendChild(li);
         });
       });
