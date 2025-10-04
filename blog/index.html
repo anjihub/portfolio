@@ -26,37 +26,25 @@
 
     <section>
       <h2>Project Blogs</h2>
-      <ul>
-        <li>
-          <strong>Learning to Utilize Mermaid Diagrams</strong> – 
-          <a href="mermaid-diagrams-virtualization.html" class="button">Read Blog</a>
-        </li>
-        <li>
-          <strong>File System Forensics</strong> – 
-          <a href="file-system-forensics.html" class="button">Read Blog</a>
-        </li>
-        <li>
-          <strong>Network Defense Labs</strong> – 
-          <a href="network-defense-labs.html" class="button">Read Blog</a>
-        </li>
-        <li>
-          <strong>Python & Bash Scripting</strong> – 
-          <a href="python-bash-scripting.html" class="button">Read Blog</a>
-        </li>
-        <li>
-          <strong>Network Traffic Analysis</strong> – 
-          <a href="network-traffic-analysis.html" class="button">Read Blog</a>
-        </li>
-        <li>
-          <strong>Mobile Forensics</strong> – 
-          <a href="mobile-forensics.html" class="button">Read Blog</a>
-        </li>
-      </ul>
+      <ul id="blog-list"></ul>
     </section>
   </main>
 
   <footer>
     <p>&copy; 2025 Anjeli Pancholi | <a href="https://github.com/anjihub">GitHub</a> | <a href="https://www.linkedin.com/in/anjeli-pancholi-11280b272/">LinkedIn</a></p>
   </footer>
+
+  <script>
+    fetch('../assets/data/projects.json')
+      .then(res => res.json())
+      .then(projects => {
+        const ul = document.getElementById('blog-list');
+        projects.forEach(p => {
+          const li = document.createElement('li');
+          li.innerHTML = `<strong>${p.title}</strong> – <a href="${p.blog}" class="button">Read Blog</a>`;
+          ul.appendChild(li);
+        });
+      });
+  </script>
 </body>
 </html>
